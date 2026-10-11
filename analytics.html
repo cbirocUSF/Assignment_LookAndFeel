@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Financial aid analytics for Mountainview Institute of Technology: dollars committed by category, award distribution and the seven-year aid trend.">
+  <meta name="author" content="Christopher Biroc">
+  <title>Analytics | Mountainview Institute of Technology Scholarship Portal</title>
+
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- ====================== NAVIGATION (identical on every page) ====================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark mit-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logo.svg" alt="" class="brand-mark" width="38" height="38">
+        <span class="brand-name">
+          Mountainview Institute of Technology
+          <span class="brand-sub">Scholarship &amp; Financial Aid</span>
+        </span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="managescholarships.html">Manage Scholarships</a></li>
+          <li class="nav-item"><a class="nav-link" href="analytics.html">Analytics</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ====================== PAGE HEADER ====================== -->
+    <section class="hero py-4">
+      <div class="container">
+        <span class="hero-eyebrow">Office of Institutional Research</span>
+        <h1 class="h2 mb-2">Financial Aid Analytics</h1>
+        <p class="mb-0">
+          Where the aid dollars go, how many students each category reaches, and how total
+          disbursements have grown since 2020. All figures are calculated from the same
+          catalog shown on the Manage Scholarships page.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================== SUMMARY TILES ====================== -->
+    <section class="stat-band">
+      <div class="container">
+        <div class="row row-cols-2 row-cols-md-4 g-3">
+          <div class="col">
+            <div class="stat-tile">
+              <div class="stat-value" id="sumCommitted">&mdash;</div>
+              <div class="stat-label">Total Committed</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="stat-tile">
+              <div class="stat-value" id="sumAwards">&mdash;</div>
+              <div class="stat-label">Individual Awards</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="stat-tile">
+              <div class="stat-value" id="sumLeading">&mdash;</div>
+              <div class="stat-label">Largest Category</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="stat-tile">
+              <div class="stat-value" id="sumGrowth">&mdash;</div>
+              <div class="stat-label">Aid Growth Since 2020</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container py-5">
+
+      <!-- ====================== CHARTS 1 AND 2 ====================== -->
+      <div class="row g-4 mb-4">
+
+        <div class="col-lg-7">
+          <div class="chart-card">
+            <h2>Dollars Committed by Category</h2>
+            <p class="chart-note">
+              Award amount multiplied by the number of awards offered in each category.
+              Need-based aid carries the largest commitment because it reaches the most students.
+            </p>
+            <div class="chart-wrap-tall">
+              <canvas id="dollarsByCategoryChart"
+                      aria-label="Horizontal bar chart of total scholarship dollars committed by category"
+                      role="img"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="chart-card">
+            <h2>Share of Awards by Category</h2>
+            <p class="chart-note">
+              Counted by individual awards rather than dollars, which shows how many students
+              each category actually reaches.
+            </p>
+            <div class="chart-wrap-tall">
+              <canvas id="awardShareChart"
+                      aria-label="Doughnut chart showing the share of individual scholarship awards by category"
+                      role="img"></canvas>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ====================== CHART 3 ====================== -->
+      <div class="row g-4">
+        <div class="col-12">
+          <div class="chart-card">
+            <h2>Total Institutional Aid Disbursed, 2020 to 2026</h2>
+            <p class="chart-note">
+              Aid disbursed across all programs, in millions of dollars. The institution has
+              roughly doubled its aid budget over seven years.
+            </p>
+            <div class="chart-wrap">
+              <canvas id="aidTrendChart"
+                      aria-label="Line chart of total institutional financial aid disbursed each year from 2020 through 2026"
+                      role="img"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================== READING THE DATA ====================== -->
+      <div class="row g-4 mt-1">
+        <div class="col-md-4">
+          <div class="mit-card p-4 h-100">
+            <span class="pill pill-gold mb-3">Finding 1</span>
+            <h3 class="card-title">Breadth beats size</h3>
+            <p class="text-muted mb-0">
+              Need-based aid has the second smallest award at $6,500, but with 120 awards it
+              commits more money than any other category and reaches the most students.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="mit-card p-4 h-100">
+            <span class="pill mb-3">Finding 2</span>
+            <h3 class="card-title">Research funding is concentrated</h3>
+            <p class="text-muted mb-0">
+              The graduate research fellowship is the largest single award at $22,000, but only
+              twelve are offered, so it is a small share of the overall portfolio.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="mit-card p-4 h-100">
+            <span class="pill pill-slate mb-3">Finding 3</span>
+            <h3 class="card-title">Steady growth</h3>
+            <p class="text-muted mb-0">
+              Aid disbursed has risen every year since 2020 without a single flat or down year,
+              which suggests the commitment is budgeted rather than opportunistic.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ====================== FOOTER (identical on every page) ====================== -->
+  <footer class="mit-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <h5>Mountainview Institute of Technology</h5>
+          <p class="mb-0">
+            A fictional institution created for ISM 6225 Assignment 1. All scholarship
+            figures on this site are sample data and do not describe a real school.
+          </p>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Pages</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="managescholarships.html">Manage Scholarships</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h5>Developer</h5>
+          <ul class="list-unstyled mb-0">
+            <li>Christopher Biroc</li>
+            <li><a href="https://github.com/cbirocUSF/Assignment_LookAndFeel" target="_blank" rel="noopener">GitHub Repository</a></li>
+            <li><a href="https://www.linkedin.com/in/christopherbiroc" target="_blank" rel="noopener">LinkedIn Profile</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        &copy; <span id="footerYear">2026</span> Christopher Biroc &middot; ISM 6225 Application Development for Analytics &middot; University of South Florida
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================== SCRIPTS ====================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/analytics.js"></script>
+</body>
+
+</html>

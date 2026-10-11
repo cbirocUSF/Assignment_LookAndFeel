@@ -1,1 +1,240 @@
-<!--Your HTML code here-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Scholarship and financial aid portal for Mountainview Institute of Technology. Browse award programs, manage the catalog and review aid analytics.">
+  <meta name="author" content="Christopher Biroc">
+  <title>Home | Mountainview Institute of Technology Scholarship Portal</title>
+
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- ====================== NAVIGATION (identical on every page) ====================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark mit-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logo.svg" alt="" class="brand-mark" width="38" height="38">
+        <span class="brand-name">
+          Mountainview Institute of Technology
+          <span class="brand-sub">Scholarship &amp; Financial Aid</span>
+        </span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="managescholarships.html">Manage Scholarships</a></li>
+          <li class="nav-item"><a class="nav-link" href="analytics.html">Analytics</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ====================== HERO ====================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="hero-eyebrow">Est. 1891 &middot; Founded on the Mountainview Claim</span>
+            <h1>Every student deserves a stake in the claim.</h1>
+            <p class="mb-4">
+              Mountainview Institute of Technology was built by prospectors who believed that
+              opportunity should be dug up and shared. Today that means
+              <strong>$3.2 million</strong> in scholarships and need-based aid committed across
+              ten award programs, with no student turned away for want of a grubstake.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="managescholarships.html" class="btn btn-mit btn-lg">Browse the Catalog</a>
+              <a href="analytics.html" class="btn btn-outline-light btn-lg btn-mit-outline">View Aid Analytics</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 text-center">
+            <img src="img/hero-miner.svg"
+                 alt="A gold prospector with a pickaxe standing outside the Mountainview mine entrance in the mountains"
+                 class="hero-art" width="800" height="560">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== KEY NUMBERS ====================== -->
+    <section class="stat-band">
+      <div class="container">
+        <div class="row row-cols-2 row-cols-md-4 g-3">
+          <div class="col">
+            <div class="stat-tile">
+              <div class="stat-value" id="statCommitted">&mdash;</div>
+              <div class="stat-label">Aid Committed</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="stat-tile">
+              <div class="stat-value" id="statAwards">&mdash;</div>
+              <div class="stat-label">Awards Available</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="stat-tile">
+              <div class="stat-value" id="statPrograms">&mdash;</div>
+              <div class="stat-label">Open Programs</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="stat-tile">
+              <div class="stat-value" id="statAverage">&mdash;</div>
+              <div class="stat-label">Average Award</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== WHAT THIS PORTAL DOES ====================== -->
+    <section class="container py-5">
+      <h2 class="section-title text-center">What You Can Do Here</h2>
+      <p class="lead-muted mx-auto text-center mb-4">
+        The portal gives students, advisors and the financial aid office one place to find
+        award programs, keep the catalog current and watch how aid dollars are distributed.
+      </p>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="mit-card p-4 h-100">
+            <span class="pill pill-gold mb-3">Students</span>
+            <h3 class="card-title">Find your award</h3>
+            <p class="text-muted mb-0">
+              Search ten funded programs by category, GPA requirement and deadline, from
+              first-generation grants to graduate research fellowships.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="mit-card p-4 h-100">
+            <span class="pill mb-3">Aid Office</span>
+            <h3 class="card-title">Manage the catalog</h3>
+            <p class="text-muted mb-0">
+              Add a new scholarship, revise an award amount, correct a deadline or retire a
+              program that is no longer funded, all from a single form.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="mit-card p-4 h-100">
+            <span class="pill pill-slate mb-3">Leadership</span>
+            <h3 class="card-title">See where aid goes</h3>
+            <p class="text-muted mb-0">
+              Review dollars committed by category, how many students each category reaches,
+              and the seven-year trend in total aid disbursed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== FEATURED SCHOLARSHIPS ====================== -->
+    <section class="stat-band">
+      <div class="container py-4">
+        <h2 class="section-title">Featured Award Programs</h2>
+        <p class="lead-muted mb-4">
+          Four programs with upcoming deadlines. The full catalog, including every
+          need-based and athletic award, is on the Manage Scholarships page.
+        </p>
+
+        <div class="row g-4" id="featuredCards">
+          <!-- Cards are generated by js/home.js from the shared dataset -->
+        </div>
+
+        <div class="mt-4">
+          <a href="managescholarships.html" class="btn btn-teal">See All Ten Programs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== DEADLINE NOTE ====================== -->
+    <section class="container py-5">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-7">
+          <h2 class="section-title">How to Apply</h2>
+          <ol class="text-muted">
+            <li class="mb-2">Complete the institutional aid application through the student portal.</li>
+            <li class="mb-2">Submit a current transcript showing you meet the minimum GPA for the award.</li>
+            <li class="mb-2">Provide two letters of recommendation for merit and research awards.</li>
+            <li class="mb-0">Watch for the award decision roughly six weeks after each deadline.</li>
+          </ol>
+        </div>
+        <div class="col-md-5">
+          <div class="mit-card p-4 h-100">
+            <h3 class="card-title">Financial Aid Office</h3>
+            <p class="text-muted mb-2">Assay Hall, Room 204<br>Mountainview Institute of Technology</p>
+            <p class="text-muted mb-2">Monday through Friday, 8:00 a.m. to 5:00 p.m.</p>
+            <p class="text-muted mb-0">aid@mountainview-tech.example</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================== FOOTER (identical on every page) ====================== -->
+  <footer class="mit-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <h5>Mountainview Institute of Technology</h5>
+          <p class="mb-0">
+            A fictional institution created for ISM 6225 Assignment 1. All scholarship
+            figures on this site are sample data and do not describe a real school.
+          </p>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Pages</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="managescholarships.html">Manage Scholarships</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h5>Developer</h5>
+          <ul class="list-unstyled mb-0">
+            <li>Christopher Biroc</li>
+            <li><a href="https://github.com/cbirocUSF/Assignment_LookAndFeel" target="_blank" rel="noopener">GitHub Repository</a></li>
+            <li><a href="https://www.linkedin.com/in/christopherbiroc" target="_blank" rel="noopener">LinkedIn Profile</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        &copy; <span id="footerYear">2026</span> Christopher Biroc &middot; ISM 6225 Application Development for Analytics &middot; University of South Florida
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================== SCRIPTS ====================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+
+</html>

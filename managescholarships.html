@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Manage the Mountainview Institute of Technology scholarship catalog: add, review, update and delete award programs.">
+  <meta name="author" content="Christopher Biroc">
+  <title>Manage Scholarships | Mountainview Institute of Technology Scholarship Portal</title>
+
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- ====================== NAVIGATION (identical on every page) ====================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark mit-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logo.svg" alt="" class="brand-mark" width="38" height="38">
+        <span class="brand-name">
+          Mountainview Institute of Technology
+          <span class="brand-sub">Scholarship &amp; Financial Aid</span>
+        </span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="managescholarships.html">Manage Scholarships</a></li>
+          <li class="nav-item"><a class="nav-link" href="analytics.html">Analytics</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ====================== PAGE HEADER ====================== -->
+    <section class="hero py-4">
+      <div class="container">
+        <span class="hero-eyebrow">Financial Aid Office</span>
+        <h1 class="h2 mb-2">Manage the Scholarship Catalog</h1>
+        <p class="mb-0">
+          Add a new award program, update an existing one, or retire a program that is no
+          longer funded. Changes are held in the browser only, so refreshing the page
+          restores the original sample catalog.
+        </p>
+      </div>
+    </section>
+
+    <div class="container py-5">
+      <div class="row g-4">
+
+        <!-- ====================== CREATE / UPDATE FORM ====================== -->
+        <div class="col-lg-4">
+          <div class="form-panel">
+            <h2 class="h5 mb-3" id="formTitle">Add New Scholarship</h2>
+
+            <form id="scholarshipForm" class="needs-validation" novalidate>
+
+              <div class="mb-3">
+                <label for="name" class="form-label">Scholarship Name</label>
+                <input type="text" class="form-control" id="name" required maxlength="80"
+                       placeholder="e.g. Golden Pick Merit Scholarship">
+                <div class="invalid-feedback">Please enter a scholarship name.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-select" id="category" required>
+                  <option value="">Choose a category&hellip;</option>
+                  <!-- Options are added by js/scholarships.js from the CATEGORIES array -->
+                </select>
+                <div class="invalid-feedback">Please choose a category.</div>
+              </div>
+
+              <div class="row g-2 mb-3">
+                <div class="col-7">
+                  <label for="amount" class="form-label">Award Amount ($)</label>
+                  <input type="number" class="form-control" id="amount" required min="500" max="100000" step="100"
+                         placeholder="12000">
+                  <div class="invalid-feedback">Enter an amount between $500 and $100,000.</div>
+                </div>
+                <div class="col-5">
+                  <label for="awards" class="form-label">Awards</label>
+                  <input type="number" class="form-control" id="awards" required min="1" max="999" step="1"
+                         placeholder="25">
+                  <div class="invalid-feedback">Enter 1 or more.</div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="deadline" class="form-label">Application Deadline</label>
+                <input type="date" class="form-control" id="deadline" required>
+                <div class="invalid-feedback">Please choose a deadline.</div>
+              </div>
+
+              <div class="row g-2 mb-3">
+                <div class="col-6">
+                  <label for="minGpa" class="form-label">Minimum GPA</label>
+                  <input type="number" class="form-control" id="minGpa" required min="0" max="4" step="0.1"
+                         placeholder="3.0">
+                  <div class="invalid-feedback">Enter 0.0 to 4.0.</div>
+                </div>
+                <div class="col-6">
+                  <label for="status" class="form-label">Status</label>
+                  <select class="form-select" id="status" required>
+                    <option value="Open">Open</option>
+                    <option value="Closed">Closed</option>
+                  </select>
+                  <div class="invalid-feedback">Please choose a status.</div>
+                </div>
+              </div>
+
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-teal" id="submitButton">Add Scholarship</button>
+                <button type="button" class="btn btn-outline-secondary d-none" id="cancelButton">Cancel Edit</button>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="mt-3 text-center">
+            <button type="button" class="btn btn-sm btn-link text-muted" id="resetDataButton">
+              Restore sample catalog
+            </button>
+          </div>
+        </div>
+
+        <!-- ====================== READ: FILTERS AND TABLE ====================== -->
+        <div class="col-lg-8">
+
+          <!-- Feedback messages appear here after each operation -->
+          <div id="alertBox" aria-live="polite"></div>
+
+          <div class="row g-2 mb-3">
+            <div class="col-md-6">
+              <label for="searchBox" class="form-label visually-hidden">Search scholarships</label>
+              <input type="search" class="form-control" id="searchBox"
+                     placeholder="Search by name or category&hellip;">
+            </div>
+            <div class="col-md-3">
+              <label for="categoryFilter" class="form-label visually-hidden">Filter by category</label>
+              <select class="form-select" id="categoryFilter">
+                <option value="All">All categories</option>
+                <!-- Options are added by js/scholarships.js -->
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label for="statusFilter" class="form-label visually-hidden">Filter by status</label>
+              <select class="form-select" id="statusFilter">
+                <option value="All">All statuses</option>
+                <option value="Open">Open only</option>
+                <option value="Closed">Closed only</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-mit table-hover align-middle mb-2">
+              <caption class="visually-hidden">Scholarship award programs with amount, awards available, deadline, minimum GPA and status</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Scholarship</th>
+                  <th scope="col">Category</th>
+                  <th scope="col" class="text-end">Amount</th>
+                  <th scope="col" class="text-end">Awards</th>
+                  <th scope="col">Deadline</th>
+                  <th scope="col" class="text-end">Min GPA</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="scholarshipTableBody">
+                <!-- Rows are generated by js/scholarships.js -->
+              </tbody>
+            </table>
+          </div>
+
+          <p class="text-muted small" id="recordCount" aria-live="polite"></p>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ====================== DELETE CONFIRMATION MODAL ====================== -->
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="deleteModalLabel">Delete Scholarship</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0">
+            Remove <strong id="deleteTargetName">this scholarship</strong> from the catalog?
+            This cannot be undone without restoring the sample data.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger" id="confirmDeleteButton">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================== FOOTER (identical on every page) ====================== -->
+  <footer class="mit-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <h5>Mountainview Institute of Technology</h5>
+          <p class="mb-0">
+            A fictional institution created for ISM 6225 Assignment 1. All scholarship
+            figures on this site are sample data and do not describe a real school.
+          </p>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Pages</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="managescholarships.html">Manage Scholarships</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h5>Developer</h5>
+          <ul class="list-unstyled mb-0">
+            <li>Christopher Biroc</li>
+            <li><a href="https://github.com/cbirocUSF/Assignment_LookAndFeel" target="_blank" rel="noopener">GitHub Repository</a></li>
+            <li><a href="https://www.linkedin.com/in/christopherbiroc" target="_blank" rel="noopener">LinkedIn Profile</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        &copy; <span id="footerYear">2026</span> Christopher Biroc &middot; ISM 6225 Application Development for Analytics &middot; University of South Florida
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================== SCRIPTS ====================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/scholarships.js"></script>
+</body>
+
+</html>

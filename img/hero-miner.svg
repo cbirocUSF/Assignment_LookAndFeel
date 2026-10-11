@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Hero illustration: a gold prospector at the Mountainview claim.
+  Hand-authored flat-design SVG so the hero needs no external image file
+  and stays sharp at any screen size.
+  Author: Christopher Biroc - ISM 6225 Assignment 1
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" preserveAspectRatio="xMidYMid meet"
+     role="img" aria-label="Illustration of a gold miner with a pickaxe standing outside a mine entrance in the mountains" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo1OWExZmQzYS01NmI1LTRjNWItOTg0Ni0yYjRiYWIzZmEzNzQAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaMWAWUrWR4yWnRqTCeRLnQIAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpkNTRlOTE3Ni1jMDdkLTQ4OGItYmM2MS0zZGY2NmE5YzFkZTBscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoHv5T1Fy3fHeWqR33/SGVmAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggLbJkxYMOYGtJLPt+iCDS2TL1dyzwifbimTRM1e/aXgqkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaAxHU8gEGUXXta2xFdXvKYIAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIC/MaNRiBqTpm4ce7Ti2bE9dntij/R7x537M5MFPTlXHZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQIxZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjU5YTFmZDNhLTU2YjUtNGM1Yi05ODQ2LTJiNGJhYjNmYTM3NC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjY2ZmIzZTNjLTkxZTEtNGU2MS05MWJkLWQxMzcyMDFjYWFiZnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAtsmTFgw5ga0ks+36IINLZMvV3LPCJ9uKZNEzV79peCqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg+ZL3XgvW2gQMXq5z9BhvE4mg9qhWajq1YPRr5la/nLiiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgge7KKwe2gZvVKvpcagsnonPCDUc4c1J3WjGDvovJ0d3R0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQI+8de/qKzWp3gxSt1+l1iWQb6t2xHHDs2lbuN/V+Z2Zcz7P2BoQazHRuHYyQdWgOoK15BJxITXKz886pQDxqUk=</c2pa:manifest></metadata>
+
+  <title>The Mountainview gold prospector</title>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#2f4f4f"/>
+      <stop offset="55%"  stop-color="#367588"/>
+      <stop offset="100%" stop-color="#7fa9b3"/>
+    </linearGradient>
+
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#3a5450"/>
+      <stop offset="100%" stop-color="#243c3c"/>
+    </linearGradient>
+
+    <radialGradient id="sunGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#f0d784" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f0d784" stop-opacity="0"/>
+    </radialGradient>
+
+    <clipPath id="frame">
+      <rect x="0" y="0" width="800" height="560" rx="10"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+
+    <!-- ============ SKY ============ -->
+    <rect x="0" y="0" width="800" height="470" fill="url(#sky)"/>
+
+    <!-- Sun and glow -->
+    <circle cx="612" cy="150" r="130" fill="url(#sunGlow)"/>
+    <circle cx="612" cy="150" r="52" fill="#f0d784"/>
+    <circle cx="612" cy="150" r="52" fill="none" stroke="#c9a227" stroke-width="3" stroke-opacity="0.5"/>
+
+    <!-- Drifting clouds -->
+    <g fill="#ffffff" opacity="0.14">
+      <ellipse cx="170" cy="112" rx="78" ry="22"/>
+      <ellipse cx="215" cy="100" rx="52" ry="18"/>
+      <ellipse cx="460" cy="78"  rx="60" ry="17"/>
+      <ellipse cx="700" cy="268" rx="88" ry="20"/>
+    </g>
+
+    <!-- ============ MOUNTAIN RANGES, far to near ============ -->
+    <!-- Far range -->
+    <polygon points="-10,330 110,196 215,286 330,168 462,300 566,222 686,292 810,232 810,480 -10,480"
+             fill="#4a7482" opacity="0.75"/>
+    <polygon points="330,168 304,198 358,198" fill="#ffffff" opacity="0.8"/>
+    <polygon points="110,196 88,222 134,222" fill="#ffffff" opacity="0.7"/>
+
+    <!-- Middle range -->
+    <polygon points="-10,372 96,268 206,340 306,246 428,348 528,292 648,356 748,302 810,338 810,480 -10,480"
+             fill="#2f6473"/>
+    <polygon points="306,246 282,278 332,278" fill="#ffffff" opacity="0.9"/>
+    <polygon points="528,292 510,316 548,316" fill="#ffffff" opacity="0.75"/>
+
+    <!-- Near range -->
+    <polygon points="-10,412 134,332 262,400 384,344 506,406 626,358 748,404 810,378 810,480 -10,480"
+             fill="#2a4a4e"/>
+
+    <!-- ============ GROUND ============ -->
+    <rect x="0" y="452" width="800" height="108" fill="url(#ground)"/>
+    <path d="M0 452 Q 200 440 400 452 T 800 448 L800 470 L0 470 Z" fill="#3f5c56"/>
+
+    <!-- Scattered ore specks in the dirt -->
+    <g fill="#c9a227" opacity="0.5">
+      <circle cx="96"  cy="508" r="3"/>
+      <circle cx="188" cy="530" r="2.4"/>
+      <circle cx="300" cy="500" r="2.2"/>
+      <circle cx="690" cy="520" r="3"/>
+      <circle cx="757" cy="496" r="2.2"/>
+      <circle cx="540" cy="536" r="2.6"/>
+    </g>
+
+    <!-- ============ MINE ENTRANCE (left) ============ -->
+    <g>
+      <!-- Rock face -->
+      <path d="M58 452 L58 352 Q 150 316 244 352 L244 452 Z" fill="#2a4a4e"/>
+      <path d="M58 452 L58 352 Q 150 316 244 352 L244 452 Z" fill="#000000" opacity="0.12"/>
+
+      <!-- Tunnel opening -->
+      <path d="M112 452 L112 400 a39 39 0 0 1 78 0 L190 452 Z" fill="#142222"/>
+
+      <!-- Timber frame -->
+      <rect x="100" y="392" width="16" height="60" fill="#8a6a3a"/>
+      <rect x="186" y="392" width="16" height="60" fill="#8a6a3a"/>
+      <rect x="92"  y="378" width="118" height="17" rx="3" fill="#a07f48"/>
+
+      <!-- Claim sign -->
+      <rect x="110" y="330" width="84" height="30" rx="4" fill="#c9a227"/>
+      <rect x="110" y="330" width="84" height="30" rx="4" fill="none" stroke="#8a6a3a" stroke-width="2"/>
+      <text x="152" y="350" font-family="Segoe UI, Arial, sans-serif" font-size="14"
+            font-weight="700" fill="#2f4f4f" text-anchor="middle">CLAIM 1891</text>
+
+      <!-- Rail track running out of the tunnel -->
+      <g stroke="#53463a" stroke-width="4">
+        <line x1="124" y1="462" x2="338" y2="462"/>
+        <line x1="124" y1="474" x2="338" y2="474"/>
+      </g>
+      <g stroke="#6b5a49" stroke-width="3">
+        <line x1="140" y1="458" x2="140" y2="478"/>
+        <line x1="180" y1="458" x2="180" y2="478"/>
+        <line x1="220" y1="458" x2="220" y2="478"/>
+        <line x1="260" y1="458" x2="260" y2="478"/>
+        <line x1="300" y1="458" x2="300" y2="478"/>
+      </g>
+    </g>
+
+    <!-- ============ ORE CART (center-left, on the rails) ============ -->
+    <g>
+      <path d="M242 418 L336 418 L326 462 L252 462 Z" fill="#4a6a72"/>
+      <path d="M242 418 L336 418 L332 430 L246 430 Z" fill="#5d7f87"/>
+      <!-- Gold ore heaped above the rim -->
+      <g fill="#c9a227">
+        <circle cx="266" cy="414" r="9"/>
+        <circle cx="288" cy="408" r="11"/>
+        <circle cx="311" cy="414" r="8"/>
+      </g>
+      <g fill="#f0d784">
+        <circle cx="285" cy="405" r="4.5"/>
+        <circle cx="265" cy="411" r="3.2"/>
+        <circle cx="311" cy="411" r="3"/>
+      </g>
+      <!-- Wheels -->
+      <circle cx="266" cy="466" r="12" fill="#243c3c"/>
+      <circle cx="266" cy="466" r="4.5" fill="#6b5a49"/>
+      <circle cx="314" cy="466" r="12" fill="#243c3c"/>
+      <circle cx="314" cy="466" r="4.5" fill="#6b5a49"/>
+    </g>
+
+    <!-- ============ THE PROSPECTOR (right of center) ============ -->
+    <g>
+      <!-- Shadow on the ground -->
+      <ellipse cx="500" cy="534" rx="62" ry="10" fill="#142222" opacity="0.3"/>
+
+      <!-- Pickaxe planted in the ground at the prospector's side -->
+      <g>
+        <line x1="558" y1="546" x2="550" y2="402" stroke="#8a6a3a" stroke-width="9" stroke-linecap="round"/>
+        <!-- Curved pick head -->
+        <path d="M508 396 Q 550 378 592 396 L592 405 Q 550 388 508 405 Z" fill="#b8bdbd"/>
+        <path d="M508 396 Q 550 378 592 396 L592 400 Q 550 383 508 400 Z" fill="#d9dede"/>
+        <rect x="542" y="390" width="16" height="20" rx="3" fill="#9aa0a0"/>
+      </g>
+
+      <!-- Legs -->
+      <path d="M476 486 L498 486 L496 534 L474 534 Z" fill="#2f4f4f"/>
+      <path d="M504 486 L526 486 L532 534 L510 534 Z" fill="#2f4f4f"/>
+      <!-- Knee patches -->
+      <rect x="477" y="504" width="20" height="9" fill="#3d6363"/>
+      <rect x="508" y="504" width="20" height="9" fill="#3d6363"/>
+      <!-- Boots -->
+      <path d="M468 532 L500 532 L500 546 L462 546 Z" fill="#53432f"/>
+      <path d="M508 532 L540 532 L544 546 L506 546 Z" fill="#53432f"/>
+
+      <!-- Torso: work shirt -->
+      <path d="M470 418 Q 500 408 532 418 L538 490 L468 490 Z" fill="#367588"/>
+      <!-- Shirt shading and placket -->
+      <path d="M470 418 Q 500 408 532 418 L534 440 L470 440 Z" fill="#3d8299"/>
+      <line x1="501" y1="414" x2="501" y2="490" stroke="#2b5e6d" stroke-width="2.5"/>
+      <!-- Suspenders -->
+      <line x1="483" y1="414" x2="479" y2="490" stroke="#8a6a3a" stroke-width="5"/>
+      <line x1="519" y1="414" x2="523" y2="490" stroke="#8a6a3a" stroke-width="5"/>
+
+      <!-- Belt -->
+      <rect x="466" y="482" width="74" height="11" fill="#53432f"/>
+      <rect x="496" y="482" width="14" height="11" fill="#c9a227"/>
+
+      <!-- Arms -->
+      <!-- Far arm reaching up to the pickaxe handle -->
+      <path d="M528 424 Q 552 452 552 498 L538 498 Q 538 456 516 432 Z" fill="#2f6473"/>
+      <!-- Hand gripping the pickaxe handle -->
+      <circle cx="553" cy="504" r="10" fill="#e3b58a"/>
+      <circle cx="553" cy="504" r="10" fill="none" stroke="#d9a87d" stroke-width="1.5"/>
+      <!-- Near arm hanging at the side -->
+      <path d="M474 424 Q 458 452 462 492 L476 492 Q 472 456 486 432 Z" fill="#3d8299"/>
+      <circle cx="469" cy="498" r="10" fill="#e3b58a"/>
+
+      <!-- Neck -->
+      <rect x="492" y="402" width="18" height="18" fill="#d9a87d"/>
+
+      <!-- Head -->
+      <circle cx="501" cy="386" r="23" fill="#e3b58a"/>
+      <!-- Beard -->
+      <path d="M481 390 Q 501 424 521 390 Q 517 410 501 414 Q 485 410 481 390 Z" fill="#e8e4dc"/>
+      <path d="M483 392 Q 501 400 519 392 L519 396 Q 501 404 483 396 Z" fill="#d6d1c6"/>
+      <!-- Eye and brow -->
+      <circle cx="510" cy="382" r="2.6" fill="#2f4f4f"/>
+      <path d="M505 375 Q 511 372 516 376" stroke="#9c948a" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <!-- Ear -->
+      <circle cx="486" cy="388" r="4.5" fill="#d9a87d"/>
+
+      <!-- Wide-brim hat -->
+      <ellipse cx="501" cy="368" rx="40" ry="10" fill="#8a6a3a"/>
+      <ellipse cx="501" cy="366" rx="40" ry="10" fill="#a07f48"/>
+      <path d="M481 366 Q 479 338 501 336 Q 523 338 521 366 Z" fill="#a07f48"/>
+      <path d="M481 362 Q 501 370 521 362 L521 356 Q 501 364 481 356 Z" fill="#8a6a3a"/>
+      <!-- Gold nugget tucked in the hat band -->
+      <circle cx="516" cy="359" r="4.5" fill="#c9a227"/>
+    </g>
+
+    <!-- ============ PAN OF GOLD AND SPARKLES (foreground right) ============ -->
+    <g>
+      <ellipse cx="676" cy="512" rx="54" ry="18" fill="#4a6a72"/>
+      <ellipse cx="676" cy="507" rx="47" ry="14" fill="#2a4a4e"/>
+      <g fill="#c9a227">
+        <circle cx="658" cy="505" r="6"/>
+        <circle cx="676" cy="509" r="7.5"/>
+        <circle cx="694" cy="504" r="5.5"/>
+      </g>
+      <g fill="#f0d784">
+        <circle cx="674" cy="506" r="3"/>
+        <circle cx="658" cy="503" r="2.2"/>
+      </g>
+    </g>
+
+    <!-- Sparkles -->
+    <g fill="#f0d784">
+      <path d="M352 404 l3.5 9 9 3.5 -9 3.5 -3.5 9 -3.5 -9 -9 -3.5 9 -3.5 Z" opacity="0.9"/>
+      <path d="M612 440 l2.6 7 7 2.6 -7 2.6 -2.6 7 -2.6 -7 -7 -2.6 7 -2.6 Z" opacity="0.75"/>
+      <path d="M430 476 l2 5.5 5.5 2 -5.5 2 -2 5.5 -2 -5.5 -5.5 -2 5.5 -2 Z" opacity="0.6"/>
+    </g>
+
+  </g>
+</svg>

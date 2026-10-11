@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About the developer: Christopher Biroc, MS Business Analytics and Information Systems candidate at the University of South Florida, and how this scholarship portal was built.">
+  <meta name="author" content="Christopher Biroc">
+  <title>About Us | Mountainview Institute of Technology Scholarship Portal</title>
+
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- ====================== NAVIGATION (identical on every page) ====================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark mit-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logo.svg" alt="" class="brand-mark" width="38" height="38">
+        <span class="brand-name">
+          Mountainview Institute of Technology
+          <span class="brand-sub">Scholarship &amp; Financial Aid</span>
+        </span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="managescholarships.html">Manage Scholarships</a></li>
+          <li class="nav-item"><a class="nav-link" href="analytics.html">Analytics</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ====================== PAGE HEADER ====================== -->
+    <section class="hero py-4">
+      <div class="container">
+        <span class="hero-eyebrow">About Us</span>
+        <h1 class="h2 mb-2">The Developer Behind This Site</h1>
+        <p class="mb-0">
+          This portal was designed and built by a graduate student at the University of
+          South Florida for ISM 6225, Application Development for Analytics.
+        </p>
+      </div>
+    </section>
+
+    <div class="container py-5">
+      <div class="row g-4">
+
+        <!-- ====================== PROFILE CARD ====================== -->
+        <div class="col-lg-4">
+          <div class="profile-card text-center">
+            <div class="profile-avatar" aria-hidden="true">CB</div>
+
+            <h2 class="h4 mb-1">Christopher Biroc</h2>
+            <p class="text-muted mb-3">
+              MS Business Analytics &amp; Information Systems<br>
+              University of South Florida &middot; December 2026
+            </p>
+
+            <div class="d-grid gap-2">
+              <a href="https://github.com/cbirocUSF/Assignment_LookAndFeel"
+                 class="btn btn-teal" target="_blank" rel="noopener">
+                View the Code on GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/christopherbiroc"
+                 class="btn btn-outline-secondary" target="_blank" rel="noopener">
+                Connect on LinkedIn
+              </a>
+            </div>
+
+            <hr class="my-4">
+
+            <h3 class="h6 text-uppercase text-muted mb-3">Focus Areas</h3>
+            <p class="mb-0 text-start">
+              <span class="skill-chip">Identity &amp; Access Management</span>
+              <span class="skill-chip">IT Audit</span>
+              <span class="skill-chip">SOX / IT Controls</span>
+              <span class="skill-chip">Technology Risk</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- ====================== NARRATIVE ====================== -->
+        <div class="col-lg-8">
+
+          <h2 class="section-title h3">Professional Profile</h2>
+          <p>
+            Christopher Biroc is an identity, security and technology risk professional whose
+            career spans identity and access management and IT audit. As a former Technical
+            Support Engineer at Ping Identity, he delivered client-facing technical support to
+            Fortune 100 organizations across Oracle, Linux and Active Directory environments.
+            His IT audit experience covers SOX and IT general controls testing, including
+            engagements involving enterprise healthcare systems.
+          </p>
+
+          <h3 class="h5 mt-4 mb-3">Technical Skills</h3>
+          <p>
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">Tableau</span>
+            <span class="skill-chip">Power BI</span>
+            <span class="skill-chip">Anaconda</span>
+            <span class="skill-chip">Excel</span>
+            <span class="skill-chip">Oracle</span>
+            <span class="skill-chip">Linux</span>
+            <span class="skill-chip">Active Directory</span>
+            <span class="skill-chip">HTML</span>
+            <span class="skill-chip">CSS</span>
+            <span class="skill-chip">JavaScript</span>
+          </p>
+
+          <!-- ====================== BUILD WRITE-UP ====================== -->
+          <h2 class="section-title h3 mt-5">Developing This Website</h2>
+          <p>
+            The assignment was to build the static front end of a data-driven site for an
+            assigned content theme, in my case an educational institution. I chose scholarships
+            and financial aid as the subject because it is data that students actually act on:
+            an award amount, a deadline and a GPA threshold are the three things an applicant
+            needs, and they are also the fields an aid office has to keep current. That gave the
+            site a clear purpose and made the CRUD page something more than a demonstration form.
+          </p>
+          <p>
+            I started by sketching the four required pages and deciding what data each one needed.
+            Rather than hard-coding figures into each page, I put the full scholarship catalog in a
+            single file, <code>js/data.js</code>, and had every page read from it. The home page
+            calculates its summary totals from that array, the Manage Scholarships page works
+            against a copy of it, and the Analytics page aggregates it into chart series. Because
+            there is only one source of data, the dollar figures on the home page, the rows in the
+            table and the bars on the charts cannot drift apart.
+          </p>
+          <p>
+            The layout came next. I used Bootstrap 5 for the responsive grid, the navigation bar,
+            the form controls and the modal dialog, then wrote a custom stylesheet on top of it so
+            the site would not look like an untouched template. The palette is built from two
+            brand colors, <code>#367588</code> and <code>#2f4f4f</code>, with a gold accent that
+            ties back to the institution's mining history. Declaring those colors as CSS custom
+            properties in <code>:root</code> meant I could restyle the entire site by changing
+            four lines. The hero illustration and the crest are hand-written SVG rather than
+            photographs, which keeps the page fast and avoids broken image links.
+          </p>
+          <p>
+            The hardest part was the CRUD page. My first version used separate forms for adding
+            and editing, which duplicated validation logic. I reworked it so one form handles both
+            operations, switching modes based on whether an <code>editingId</code> is set, and the
+            page got noticeably simpler. I also replaced a browser <code>confirm()</code> dialog on
+            delete with a Bootstrap modal, both because it looks consistent with the rest of the
+            site and because a blocking dialog is a poor experience. The data lives in memory only,
+            so a refresh restores the sample catalog, which is the behavior the assignment calls
+            for in a static mock.
+          </p>
+
+          <!-- ====================== TECHNOLOGY LIST ====================== -->
+          <h2 class="section-title h3 mt-5">Technologies Used</h2>
+          <ul class="tech-list">
+            <li><strong>HTML5</strong> &mdash; semantic structure for all four pages, with a shared navigation bar and footer.</li>
+            <li><strong>CSS3</strong> &mdash; a custom stylesheet using CSS custom properties for the brand palette, plus media queries for small screens.</li>
+            <li><strong>JavaScript (ES5 syntax)</strong> &mdash; DOM manipulation, event handling, array filtering and aggregation, written without a framework.</li>
+            <li><strong>Bootstrap 5.3.3</strong> &mdash; responsive grid, collapsible navbar, form validation styling, alerts and the delete confirmation modal.</li>
+            <li><strong>Chart.js 4.4.1</strong> &mdash; the three visualizations on the Analytics page, loaded only on that page so the other three stay light.</li>
+            <li><strong>SVG</strong> &mdash; the hero illustration and institutional crest, authored by hand so they scale to any screen size.</li>
+            <li><strong>Visual Studio Code</strong> &mdash; the editor used to write and test every file.</li>
+            <li><strong>Git and GitHub Pages</strong> &mdash; version control and static hosting for the finished site.</li>
+          </ul>
+
+          <!-- ====================== WHAT I LEARNED ====================== -->
+          <h2 class="section-title h3 mt-5">What I Learned</h2>
+          <p>
+            Three things stand out. First, deciding where the data lives is a design decision, not
+            a detail; moving the catalog into one file solved problems on three pages at once.
+            Second, a framework like Bootstrap gets you to a responsive layout quickly, but the
+            difference between a template and a finished site is the custom work layered on top of
+            it. Third, performance is mostly about restraint: keeping Chart.js off the pages that
+            do not need it, drawing the artwork in SVG instead of loading photographs, and writing
+            plain JavaScript rather than pulling in a library for work the browser already does.
+          </p>
+
+          <div class="mit-card p-4 mt-4">
+            <h3 class="h5">Source Code</h3>
+            <p class="text-muted mb-3">
+              The complete source for this site &mdash; every HTML page, the stylesheet, all five
+              JavaScript files and the SVG artwork &mdash; is published in the repository below.
+            </p>
+            <a href="https://github.com/cbirocUSF/Assignment_LookAndFeel"
+               class="btn btn-mit btn-url" target="_blank" rel="noopener">
+              github.com/cbirocUSF/Assignment_LookAndFeel
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ====================== FOOTER (identical on every page) ====================== -->
+  <footer class="mit-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <h5>Mountainview Institute of Technology</h5>
+          <p class="mb-0">
+            A fictional institution created for ISM 6225 Assignment 1. All scholarship
+            figures on this site are sample data and do not describe a real school.
+          </p>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Pages</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="managescholarships.html">Manage Scholarships</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h5>Developer</h5>
+          <ul class="list-unstyled mb-0">
+            <li>Christopher Biroc</li>
+            <li><a href="https://github.com/cbirocUSF/Assignment_LookAndFeel" target="_blank" rel="noopener">GitHub Repository</a></li>
+            <li><a href="https://www.linkedin.com/in/christopherbiroc" target="_blank" rel="noopener">LinkedIn Profile</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        &copy; <span id="footerYear">2026</span> Christopher Biroc &middot; ISM 6225 Application Development for Analytics &middot; University of South Florida
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================== SCRIPTS ====================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

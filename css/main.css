@@ -1,47 +1,544 @@
-/**
-Sample css code
-*/
-/* Set height to 100% for body and html to enable the background image to cover the whole page: */
-body,
-html {
-  height: 100%;
+/* ==========================================================================
+   Mountainview Institute of Technology - Scholarship & Financial Aid Portal
+   ISM 6225 Assignment 1 - Look and Feel
+   Author: Christopher Biroc
+   --------------------------------------------------------------------------
+   Custom stylesheet layered on top of Bootstrap 5. Bootstrap supplies the
+   responsive grid and components; this file supplies the brand palette,
+   typography and the custom hero / card treatments.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Brand tokens
+   -------------------------------------------------------------------------- */
+:root {
+  --mit-teal: #367588;        /* primary brand color */
+  --mit-teal-dark: #2b5e6d;
+  --mit-teal-light: #e7f1f3;
+  --mit-slate: #2f4f4f;       /* secondary brand color */
+  --mit-slate-dark: #243c3c;
+  --mit-gold: #c9a227;        /* accent - the gold miner heritage */
+  --mit-gold-light: #f0d784;
+  --mit-surface: #f6f8f9;
+  --mit-border: #d8e2e4;
+  --mit-text: #1f2d2d;
+  --mit-muted: #5d6f6f;
 }
 
-/*Set background image*/
-.container {
-  background-image: url('https://doc-10-ao-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/r085o9ungppbiokopob2sfbekae4uqbb/1537920000000/14802840322886517493/*/110cT8sl-pOiHGgj9yToPkAqAzrr-RNfb');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
+/* --------------------------------------------------------------------------
+   2. Base typography and layout
+   -------------------------------------------------------------------------- */
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  color: var(--mit-text);
+  background-color: #ffffff;
+  /* Push the footer to the bottom even on short pages */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Position text in the middle */
-.middle {
+main {
+  flex: 1 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--mit-slate);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: var(--mit-teal);
+}
+
+a:hover {
+  color: var(--mit-teal-dark);
+}
+
+/* A short gold rule used under section headings for visual consistency */
+.section-title {
+  position: relative;
+  padding-bottom: 0.65rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-title::after {
+  content: "";
   position: absolute;
-  color: beige;
-  top: 70%;
-  left: 39%;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--mit-gold);
+}
+
+.section-title.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lead-muted {
+  color: var(--mit-muted);
+  font-size: 1.05rem;
+  max-width: 62ch;
+}
+
+/* --------------------------------------------------------------------------
+   3. Navigation bar - identical markup on every page
+   -------------------------------------------------------------------------- */
+.mit-navbar {
+  background-color: var(--mit-slate);
+  border-bottom: 3px solid var(--mit-gold);
+  box-shadow: 0 2px 10px rgba(47, 79, 79, 0.18);
+}
+
+.mit-navbar .navbar-brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+
+.mit-navbar .navbar-brand:hover,
+.mit-navbar .navbar-brand:focus {
+  color: #ffffff;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+}
+
+.brand-name {
+  line-height: 1.1;
+}
+
+.brand-sub {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mit-gold-light);
+}
+
+.mit-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  padding: 0.5rem 0.9rem;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.mit-navbar .nav-link:hover,
+.mit-navbar .nav-link:focus {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Current page is marked by main.js */
+.mit-navbar .nav-link.active {
+  color: #ffffff;
+  background-color: var(--mit-teal);
+  box-shadow: inset 0 -2px 0 var(--mit-gold);
+}
+
+/* --------------------------------------------------------------------------
+   4. Hero section (home page)
+   -------------------------------------------------------------------------- */
+.hero {
+  background: linear-gradient(135deg, var(--mit-slate) 0%, var(--mit-teal) 100%);
+  color: #ffffff;
+  padding: 3.5rem 0;
+}
+
+.hero h1 {
+  color: #ffffff;
+  font-size: clamp(1.9rem, 4vw, 2.9rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.08rem;
+  max-width: 54ch;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--mit-gold-light);
+  margin-bottom: 0.75rem;
+}
+
+.hero-art {
+  width: 100%;
+  height: auto;
+  max-width: 520px;
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(36, 60, 60, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   5. Buttons
+   -------------------------------------------------------------------------- */
+.btn-mit {
+  background-color: var(--mit-gold);
+  border-color: var(--mit-gold);
+  color: var(--mit-slate-dark);
+  font-weight: 600;
+}
+
+.btn-mit:hover,
+.btn-mit:focus {
+  background-color: var(--mit-gold-light);
+  border-color: var(--mit-gold-light);
+  color: var(--mit-slate-dark);
+}
+
+.btn-mit-outline {
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.btn-mit-outline:hover,
+.btn-mit-outline:focus {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: var(--mit-slate);
+}
+
+.btn-teal {
+  background-color: var(--mit-teal);
+  border-color: var(--mit-teal);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.btn-teal:hover,
+.btn-teal:focus {
+  background-color: var(--mit-teal-dark);
+  border-color: var(--mit-teal-dark);
+  color: #ffffff;
+}
+
+/* A button whose label is a long URL. Without this the URL is one
+   unbreakable word and pushes the page sideways on a phone. */
+.btn-url {
+  white-space: normal;
+  word-break: break-all;
+  max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   6. Statistic tiles
+   -------------------------------------------------------------------------- */
+.stat-band {
+  background-color: var(--mit-surface);
+  border-top: 1px solid var(--mit-border);
+  border-bottom: 1px solid var(--mit-border);
+  padding: 2rem 0;
+}
+
+.stat-tile {
   text-align: center;
-  font-size: 25px;
+  padding: 0.5rem;
 }
 
-/*Set circle in unordered list*/
-.middle ul {
-  list-style-type: circle;
+.stat-value {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--mit-teal);
+  line-height: 1.1;
 }
 
-/*Set text inside li tag to left*/
-.middle ul li {
-  text-align: left !important;
+.stat-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--mit-muted);
+  margin-top: 0.35rem;
 }
 
-/*Set text color for a tag inside middle class and ul>li element*/
-.middle ul li a {
-  color: beige;
+/* --------------------------------------------------------------------------
+   7. Cards
+   -------------------------------------------------------------------------- */
+/* Note: no height here on purpose. Cards that sit side by side in a grid
+   row get Bootstrap's .h-100 class so they match each other, while a card
+   standing on its own stays as tall as its content. */
+.mit-card {
+  border: 1px solid var(--mit-border);
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-/*Change text color and decoration for a tags inside middle class and ul>li element*/
-.middle ul li a:hover {
-  color: red;
+.mit-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(47, 79, 79, 0.12);
+}
+
+.mit-card .card-title {
+  color: var(--mit-slate);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.card-amount {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--mit-teal);
+}
+
+/* Category pills reuse one shape with different colors */
+.pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background-color: var(--mit-teal-light);
+  color: var(--mit-teal-dark);
+}
+
+.pill-gold {
+  background-color: #faf0cf;
+  color: #7a6214;
+}
+
+.pill-slate {
+  background-color: #e3eaea;
+  color: var(--mit-slate);
+}
+
+.pill-open {
+  background-color: #e3f1e6;
+  color: #2a6135;
+}
+
+.pill-closed {
+  background-color: #f4e4e4;
+  color: #8a3232;
+}
+
+/* --------------------------------------------------------------------------
+   8. About Us page
+   -------------------------------------------------------------------------- */
+.profile-card {
+  background-color: var(--mit-surface);
+  border: 1px solid var(--mit-border);
+  border-radius: 10px;
+  padding: 1.75rem;
+}
+
+.profile-avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--mit-teal) 0%, var(--mit-slate) 100%);
+  color: #ffffff;
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  border: 3px solid var(--mit-gold);
+}
+
+.skill-chip {
+  display: inline-block;
+  background-color: #ffffff;
+  border: 1px solid var(--mit-border);
+  border-radius: 6px;
+  padding: 0.35rem 0.7rem;
+  margin: 0 0.4rem 0.5rem 0;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--mit-slate);
+}
+
+.tech-list li {
+  margin-bottom: 0.55rem;
+}
+
+/* --------------------------------------------------------------------------
+   9. CRUD page - form and table
+   -------------------------------------------------------------------------- */
+.form-panel {
+  background-color: var(--mit-surface);
+  border: 1px solid var(--mit-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--mit-slate);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--mit-teal);
+  box-shadow: 0 0 0 0.2rem rgba(54, 117, 136, 0.2);
+}
+
+.table-mit thead th {
+  background-color: var(--mit-slate);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 3px solid var(--mit-gold);
+  white-space: nowrap;
+}
+
+.table-mit tbody tr:hover {
+  background-color: var(--mit-teal-light);
+}
+
+/* The row currently loaded into the form for editing */
+.table-mit tbody tr.row-editing {
+  background-color: #fdf6e0;
+  box-shadow: inset 3px 0 0 var(--mit-gold);
+}
+
+.table-mit td {
+  vertical-align: middle;
+  font-size: 0.93rem;
+}
+
+.btn-icon {
+  padding: 0.2rem 0.55rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   10. Analytics page
+   -------------------------------------------------------------------------- */
+.chart-card {
+  border: 1px solid var(--mit-border);
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 1.25rem;
+  height: 100%;
+}
+
+.chart-card h2,
+.chart-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.chart-note {
+  font-size: 0.85rem;
+  color: var(--mit-muted);
+  margin-bottom: 1rem;
+}
+
+/* Fixed-height wrapper so Chart.js has a stable box to draw into and the
+   page does not reflow while the chart initializes. */
+.chart-wrap {
+  position: relative;
+  height: 300px;
+}
+
+.chart-wrap-tall {
+  position: relative;
+  height: 340px;
+}
+
+/* --------------------------------------------------------------------------
+   11. Footer
+   -------------------------------------------------------------------------- */
+.mit-footer {
+  background-color: var(--mit-slate-dark);
+  color: rgba(255, 255, 255, 0.75);
+  padding: 2rem 0 1.5rem;
+  border-top: 3px solid var(--mit-gold);
+  font-size: 0.9rem;
+}
+
+.mit-footer h5 {
+  color: #ffffff;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 0.75rem;
+}
+
+.mit-footer a {
+  color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
+}
+
+.mit-footer a:hover {
+  color: var(--mit-gold-light);
+  text-decoration: underline;
+}
+
+.footer-note {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   12. Small-screen adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .mit-navbar .nav-link {
+    padding: 0.6rem 0.75rem;
+  }
+
+  .hero {
+    padding: 2.5rem 0;
+  }
+
+  .hero-art {
+    margin-top: 1.75rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  /* The full institution name is long; shrink it so it does not run into
+     the edge of a phone screen. */
+  .mit-navbar .navbar-brand {
+    font-size: 0.92rem;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-sub {
+    font-size: 0.62rem;
+  }
+
+  .stat-tile {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .chart-wrap,
+  .chart-wrap-tall {
+    height: 260px;
+  }
 }
