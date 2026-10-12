@@ -31,11 +31,32 @@ document.addEventListener('DOMContentLoaded', function () {
   Chart.defaults.font.size = 12;
   Chart.defaults.color = TEXT_COLOR;
 
-  fillAnalyticsSummary();
+  // The summary tiles are decoration; the charts are the point of the page.
+  // Wrapping the tiles means a problem up there can never stop the charts
+  // from drawing below.
+  try {
+    fillAnalyticsSummary();
+  } catch (error) {
+    console.error('Could not fill the summary tiles:', error);
+  }
+
   buildDollarsByCategoryChart();
   buildAwardShareChart();
   buildAidTrendChart();
 });
+
+/**
+ * Writes text into an element, quietly doing nothing if the element is not on
+ * the page. Without this guard a renamed or missing id throws a TypeError and
+ * stops every line of script after it.
+ */
+function setText(elementId, value) {
+  var element = document.getElementById(elementId);
+
+  if (element) {
+    element.textContent = value;
+  }
+}
 
 /* --------------------------------------------------------------------------
    Summary tiles above the charts
@@ -53,12 +74,10 @@ function fillAnalyticsSummary() {
   // like they contradict each other.
   var catalogShare = (summary.totalCommitted / allAidDollars) * 100;
 
-  document.getElementById('sumCommitted').textContent =
-    '$' + (summary.totalCommitted / 1000000).toFixed(2) + 'M';
-  document.getElementById('sumAllAid').textContent =
-    '$' + latestYear.millions.toFixed(1) + 'M';
-  document.getElementById('sumShare').textContent = catalogShare.toFixed(1) + '%';
-  document.getElementById('sumAwards').textContent = summary.totalAwards;
+  setText('sumCommitted', '$' + (summary.totalCommitted / 1000000).toFixed(2) + 'M');
+  setText('sumAllAid', '$' + latestYear.millions.toFixed(1) + 'M');
+  setText('sumShare', catalogShare.toFixed(1) + '%');
+  setText('sumAwards', summary.totalAwards);
 }
 
 /* --------------------------------------------------------------------------

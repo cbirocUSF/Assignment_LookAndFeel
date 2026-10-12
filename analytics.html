@@ -50,9 +50,10 @@
         <span class="hero-eyebrow">Office of Institutional Research</span>
         <h1 class="h2 mb-2">Financial Aid Analytics</h1>
         <p class="mb-0">
-          Where the aid dollars go, how many students each category reaches, and how total
-          disbursements have grown since 2020. All figures are calculated from the same
-          catalog shown on the Manage Scholarships page.
+          Where the scholarship dollars go, how many students each category reaches, and how
+          total student aid has grown since 2020. The category charts are calculated from the
+          same catalog shown on the Manage Scholarships page; the trend line covers all aid
+          from every source.
         </p>
       </div>
     </section>
@@ -64,7 +65,19 @@
           <div class="col">
             <div class="stat-tile">
               <div class="stat-value" id="sumCommitted">&mdash;</div>
-              <div class="stat-label">Total Committed</div>
+              <div class="stat-label">Scholarship Catalog</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="stat-tile">
+              <div class="stat-value" id="sumAllAid">&mdash;</div>
+              <div class="stat-label">All Aid Disbursed, 2026</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="stat-tile">
+              <div class="stat-value" id="sumShare">&mdash;</div>
+              <div class="stat-label">Catalog Share of All Aid</div>
             </div>
           </div>
           <div class="col">
@@ -73,23 +86,31 @@
               <div class="stat-label">Individual Awards</div>
             </div>
           </div>
-          <div class="col">
-            <div class="stat-tile">
-              <div class="stat-value" id="sumLeading">&mdash;</div>
-              <div class="stat-label">Largest Category</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="stat-tile">
-              <div class="stat-value" id="sumGrowth">&mdash;</div>
-              <div class="stat-label">Aid Growth Since 2020</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
     <div class="container py-5">
+
+      <!-- ====================== HOW TO READ THESE NUMBERS ======================
+           The first two charts cover the named scholarship catalog; the third
+           covers all student aid from every source. Stating the relationship
+           up front stops the two dollar figures from looking contradictory.
+           ====================================================================== -->
+      <div class="alert alert-light border mb-4" role="note">
+        <h2 class="h6 text-uppercase mb-2">How to Read These Numbers</h2>
+        <p class="mb-0 small">
+          The first two charts describe the <strong>ten named scholarship programs</strong> in
+          our catalog, which commit <strong>$3.22 million</strong> per application cycle. The
+          third chart describes <strong>all student aid from every source</strong>, which
+          reached <strong>$39.7 million</strong> in 2026 and also includes federal Pell grants,
+          student loans, state aid, tuition waivers and graduate assistantship stipends. The
+          scholarship catalog is therefore a subset of total aid, accounting for roughly
+          <strong>8%</strong> of it. The two figures measure different things in a second way as
+          well: the catalog counts dollars <em>committed</em> for one cycle, while the trend
+          line counts dollars actually <em>disbursed</em> in a calendar year.
+        </p>
+      </div>
 
       <!-- ====================== CHARTS 1 AND 2 ====================== -->
       <div class="row g-4 mb-4">
@@ -130,14 +151,17 @@
       <div class="row g-4">
         <div class="col-12">
           <div class="chart-card">
-            <h2>Total Institutional Aid Disbursed, 2020 to 2026</h2>
+            <h2>Total Student Aid Disbursed, All Sources, 2020 to 2026</h2>
             <p class="chart-note">
-              Aid disbursed across all programs, in millions of dollars. The institution has
-              roughly doubled its aid budget over seven years.
+              Every dollar of student aid disbursed in each year, in millions. This is a wider
+              measure than the two charts above: alongside the named scholarship catalog it
+              includes federal grants and loans, state aid, tuition waivers and assistantship
+              stipends. Total aid has more than doubled since 2020, and the $3.22 million
+              scholarship catalog is about 8% of the 2026 figure.
             </p>
             <div class="chart-wrap">
               <canvas id="aidTrendChart"
-                      aria-label="Line chart of total institutional financial aid disbursed each year from 2020 through 2026"
+                      aria-label="Line chart of total student financial aid disbursed from all sources each year from 2020 through 2026"
                       role="img"></canvas>
             </div>
           </div>
@@ -173,8 +197,8 @@
             <span class="pill pill-slate mb-3">Finding 3</span>
             <h3 class="card-title">Steady growth</h3>
             <p class="text-muted mb-0">
-              Aid disbursed has risen every year since 2020 without a single flat or down year,
-              which suggests the commitment is budgeted rather than opportunistic.
+              Total student aid has risen every year since 2020 without a single flat or down
+              year, which suggests the commitment is budgeted rather than opportunistic.
             </p>
           </div>
         </div>
