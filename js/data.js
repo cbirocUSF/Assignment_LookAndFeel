@@ -125,7 +125,13 @@ var CATEGORIES = [
   "Graduate Research"
 ];
 
-/* Total aid disbursed institution-wide, in millions of dollars. */
+/* Total student aid disbursed from ALL sources, in millions of dollars.
+   This is a wider measure than the SCHOLARSHIPS catalog above. Alongside the
+   named scholarship programs it includes federal Pell grants, student loans,
+   state aid, tuition waivers and graduate assistantship stipends, so the
+   catalog's $3.22M commitment is only about 8% of the 2026 figure. The two
+   also differ in basis: the catalog counts dollars committed for one
+   application cycle, this array counts dollars actually disbursed in a year. */
 var AID_BY_YEAR = [
   { year: "2020", millions: 18.4 },
   { year: "2021", millions: 21.2 },

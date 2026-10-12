@@ -71,6 +71,20 @@ All four pages read from one array, `SCHOLARSHIPS`, defined in `js/data.js`:
 - **Analytics** calls `totalDollarsByCategory()` and `awardCountByCategory()` to
   build its chart series.
 
+### Two different scopes on the Analytics page
+
+The analytics page deliberately shows two different pools of money, and says so in a
+"How to Read These Numbers" panel:
+
+- **`SCHOLARSHIPS` ($3.22M)** — the ten named scholarship programs, counted as dollars
+  *committed* for one application cycle. This drives the two category charts.
+- **`AID_BY_YEAR` ($39.7M in 2026)** — all student aid *disbursed* in a year from every
+  source, including federal Pell grants, loans, state aid, tuition waivers and
+  assistantship stipends. This drives the trend line.
+
+The catalog is a subset of total aid, about 8.1% of the 2026 figure, and the page shows
+that share as its own statistic so the two numbers never read as a contradiction.
+
 Because there is only one source of data, the figures on the home page, the rows in
 the table and the bars on the charts cannot disagree. In a data-driven version of
 this site, `data.js` would be replaced by a database query.

@@ -42,27 +42,23 @@ document.addEventListener('DOMContentLoaded', function () {
    -------------------------------------------------------------------------- */
 function fillAnalyticsSummary() {
   var summary = portfolioSummary(SCHOLARSHIPS);
-  var byCategory = totalDollarsByCategory(SCHOLARSHIPS);
 
-  // Find the category carrying the most dollars.
-  var leading = byCategory[0];
+  // The most recent year in the all-sources trend series, converted from
+  // millions back to dollars so the two figures can be compared directly.
+  var latestYear = AID_BY_YEAR[AID_BY_YEAR.length - 1];
+  var allAidDollars = latestYear.millions * 1000000;
 
-  for (var i = 1; i < byCategory.length; i++) {
-    if (byCategory[i].total > leading.total) {
-      leading = byCategory[i];
-    }
-  }
-
-  // Growth from the first to the last year in the trend series.
-  var firstYear = AID_BY_YEAR[0];
-  var lastYear = AID_BY_YEAR[AID_BY_YEAR.length - 1];
-  var growth = ((lastYear.millions - firstYear.millions) / firstYear.millions) * 100;
+  // What portion of all student aid the named scholarship catalog represents.
+  // Showing this explicitly keeps the $3.2M and $39.7M figures from looking
+  // like they contradict each other.
+  var catalogShare = (summary.totalCommitted / allAidDollars) * 100;
 
   document.getElementById('sumCommitted').textContent =
-    '$' + (summary.totalCommitted / 1000000).toFixed(1) + 'M';
+    '$' + (summary.totalCommitted / 1000000).toFixed(2) + 'M';
+  document.getElementById('sumAllAid').textContent =
+    '$' + latestYear.millions.toFixed(1) + 'M';
+  document.getElementById('sumShare').textContent = catalogShare.toFixed(1) + '%';
   document.getElementById('sumAwards').textContent = summary.totalAwards;
-  document.getElementById('sumLeading').textContent = leading.category;
-  document.getElementById('sumGrowth').textContent = '+' + Math.round(growth) + '%';
 }
 
 /* --------------------------------------------------------------------------
@@ -191,7 +187,7 @@ function buildAidTrendChart() {
     data: {
       labels: labels,
       datasets: [{
-        label: 'Aid disbursed ($M)',
+        label: 'All student aid disbursed ($M)',
         data: values,
         borderColor: '#367588',
         backgroundColor: 'rgba(54, 117, 136, 0.12)',
@@ -213,7 +209,7 @@ function buildAidTrendChart() {
         tooltip: {
           callbacks: {
             label: function (context) {
-              return '$' + context.parsed.y.toFixed(1) + ' million disbursed';
+              return '$' + context.parsed.y.toFixed(1) + ' million, all sources';
             }
           }
         }
